@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Media{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-4">Upload Media with Text</h2>
+            <form action="{{ url_for('auth.upload') }}" method="POST" enctype="multipart/form-data">
+                <!-- File Upload -->
+                <div class="mb-3">
+                    <label for="file" class="form-label">Select a file (image/video/GIF)</label>
+                    <input type="file" class="form-control" id="file" name="file" required>
+                </div>
+
+                <!-- Text Input -->
+                <div class="mb-3">
+                    <label for="description" class="form-label">Write something about the media</label>
+                    <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter your text here..." required></textarea>
+                </div>
+
+                <!-- Vrsta Selection -->
+                <div class="mb-3">
+                    <label for="vrsta_id" class="form-label">Select Exercise Type</label>
+                    <select class="form-control" id="vrsta_id" name="vrsta_id" required>
+                        <option value="1">Hrbet</option>
+                        <option value="2">Prsa</option>
+                        <option value="3">Noge</option>
+                        <option value="4">Roke</option>
+                        <option value="5">Ramena</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-100">Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

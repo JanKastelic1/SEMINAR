@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}News Feed{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">News Feed</h2>
+    <form action="{{ url_for('auth.news_feed') }}" method="POST">
+        <div class="mb-3">
+            <label for="vrsta_id" class="form-label">Filter by Exercise Type</label>
+            <select class="form-control" id="vrsta_id" name="vrsta_id">
+                <option value="1">Hrbet</option>
+                <option value="2">Prsa</option>
+                <option value="3">Noge</option>
+                <option value="4">Roke</option>
+                <option value="5">Ramena</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+
+    <div class="mt-4">
+        {% for vaja in vaje %}
+            <div class="card mb-3">
+                <img src="{{ url_for('static', filename='/' ~ vaja.slika) }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ vaja.opis_vaje }}</h5>
+                    <p class="card-text"><small class="text-muted">Uploaded by {{ vaja.user.first_name }} on {{ vaja.date }}</small></p>
+                    <form action="{{ url_for('auth.delete_post', post_id=vaja.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #eb345b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+/* Authentication Section */
+#auth-section {
+    background-image: url('JF-Caron-2021-Rogue-Invitational-Deadlift.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem; /* Adds padding for spacing inside the section */
+    color: white; /* Ensures text is readable on a dark background */
+    border-radius: 8px; /* Optional: rounds the corners of the section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow effect */
+}
+
+
+#auth-form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+#auth-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#auth-form button {
+    background-color: #eb345b;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#auth-form button:hover {
+    background-color: #45a049;
+}
+
+/* Exercise Section */
+#exercise-section {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+#exercise-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#exercise-section ul li {
+    margin: 0.5rem;
+}
+
+.muscle-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.muscle-btn:hover {
+    background-color: #45a049;
+}
+
+#exercise-list {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#register-section {
+    background-image: url('74c30-980889d2cb8346c9b2140a9713f44739-scaled.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem; 
+    color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+
+}
+#Groups {
+    display: flex;               
+    flex-wrap: wrap;           
+    gap: 20px;                   
+    justify-content: center;     
+    padding: 20px;               
+}
+
+
+.category {
+    flex: 0 1 200px;             
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);      
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
